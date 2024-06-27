@@ -1,0 +1,32 @@
+Name
+
+Contact
+	Mobile Number
+	EMail
+	LinkedIn
+	GitHub
+	Portfolio
+	X
+
+Summary
+
+
+Skills
+	Programming Languages
+	Tools / Applications
+	ETC...
+
+
+Experience
+	ROLE - Company Name | MM YYYY - MM YYYY
+	(bulletin points) what you did 
+	(bulletin points) what you did 
+	(bulletin points) what you did
+
+Projects
+	[link] App Name - type
+	tech stack
+	(bulletin points) what you did
+
+Education
+	Course | University | MM YYYY - MM YYYY
