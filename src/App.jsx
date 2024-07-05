@@ -1,19 +1,14 @@
-import { Header } from "./components/Header";
-import { Footer } from "./components/Footer";
-import { Button1 } from "./components/Button1";
+import { Route, Routes } from "react-router-dom";
+import { Generate } from "./Pages/Generate";
+import { Home } from "./Pages/Home";
 
-const App = (props) => {
+const App = () => {
   return (
     <>
-    <div className="flex flex-col justify-between h-screen items-center">
-      <Header />
-      <div >
-      <Button1 text="hello"/>
-      <Button1 text="hello"/>
-      <Button1 text="hello"/>
-      </div>
-      <Footer />
-    </div>
+      <Routes>
+        <Route path="/" element={<Home />}/>
+        <Route path="/generate" element={<Generate />}/>
+      </Routes>
     </>
   )
 }
