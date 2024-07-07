@@ -2,29 +2,37 @@ import { SiGithub } from "react-icons/si";
 import { MdOutlineDarkMode } from "react-icons/md";
 import { MdOutlineLightMode } from "react-icons/md";
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export const Navbar = () => {
-  const [theme, setTheme] = useState(true);
+  const [isDark, setIsDark] = useState(localStorage.getItem('isDark') === 'true');
 
   const toggle = () => {
-    setTheme(!theme);
-    (theme ? document.querySelector('html').classList.add('dark') : document.querySelector('html').classList.remove('dark'));
+    localStorage.setItem('isDark', !isDark);
+    setIsDark(prev => !prev);
   }
 
-  const renderThemeIcon = () => {
-    if(theme){
-      return(<button onClick={toggle}><MdOutlineLightMode className="text-3xl"/></button>);
+  useEffect(() => {
+    if (isDark) {
+      document.querySelector('html').classList.add('dark');
     } else {
-      return(<button onClick={toggle}><MdOutlineDarkMode className="text-3xl"/></button>);
+      document.querySelector('html').classList.remove('dark');
+    }
+  }, [isDark]);
+
+  const renderThemeIcon = () => {
+    if(isDark){
+      return(<button onClick={toggle}><MdOutlineLightMode className="text-3xl text-zinc-100"/></button>);
+    } else {
+      return(<button onClick={toggle}><MdOutlineDarkMode className="text-3xl text-zinc-950"/></button>);
     }
   }
 
   return (
-    <div className="w-screen h-[10vh] border-b-[1.5px] flex items-center justify-between px-20">
+    <div className="w-screen h-[10vh] border-b-[1px] flex items-center justify-between px-20 backdrop-filter backdrop-blur-sm bg-opacity-90 fixed top-0 bg-zinc-100 text-zinc-950 border-zinc-400 dark:bg-zinc-950 dark:text-zinc-100">
       <Link to='/' className="text-3xl">ResumeGen</Link>
       <div className="flex gap-10">
-        <a href="https://github.com/PavanMeka09/ResumeGen" target="_blank"><SiGithub className="text-3xl"/></a>
+        <Link to="https://github.com/PavanMeka09/ResumeGen" target="_blank"><SiGithub className="text-3xl text-zinc-950 dark:text-zinc-100"/></Link>
         {renderThemeIcon()}
       </div>
     </div>

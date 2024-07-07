@@ -1,11 +1,11 @@
 import React from 'react'
-import { Link } from "react-router-dom";
+import { Primary } from "./ui/Buttons/Primary.jsx";
 
 export const Hero = () => {
   return (
-    <div className='h-[90vh] w-screen flex justify-center items-center flex-col'>
-      <h1 className='text-4xl mb-10'>Free tool to Generate a AI Based ATS Friendly Resume</h1>
-      <Link to='/generate' className='cursor-pointer bg-zinc-950 dark:bg-zinc-200 dark:text-black text-white px-8 py-3 rounded-md hover:bg-zinc-800'>Create a New Resume</Link>
+    <div className='h-[100vh] w-screen flex justify-center items-center flex-col bg-zinc-100 text-zinc-950 dark:bg-zinc-950 dark:text-zinc-100'>
+      <h1 className='text-4xl mb-10'>Free tool to Generate ATS Friendly Resume</h1>
+      <Primary title='Create a New Resume' to='/generate'/>
     </div>
   )
 }
