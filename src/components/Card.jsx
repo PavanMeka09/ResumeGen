@@ -24,7 +24,7 @@ export const Card = (props) => {
           <img onClick={handleClick} src={props.image} alt={props.title + " image"} className='h-[80%] cursor-zoom-in border-2'/>
           <h1 className='text-xl underline'>{props.title}</h1>
           <button onClick={() => {
-            window.location.href='/';
+            window.location.href='/generate';
           }} className='hidden group-hover:inline-block absolute bottom-32 rounded-full px-8 py-2 bg-zinc-950 text-zinc-100'>Continue</button>
         </div>
         {renderZoomin()}
