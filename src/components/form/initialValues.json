@@ -1,0 +1,43 @@
+{
+  "fullName": "",
+  "api": "",
+  "socials": {
+    "mobile": "",
+    "email": "",
+    "website": "",
+    "linkedin": "",
+    "github": "",
+    "x": ""
+  },
+  "summary": "",
+  "skills": [""],
+  "projects": [
+    {
+      "name": "",
+      "tech": "",
+      "about": [""]
+    }
+  ],
+  "education": [
+    {
+      "course": "",
+      "college": "",
+      "start": "",
+      "end": "",
+      "location": "",
+      "result": ""
+    }
+  ],
+  "xp": [
+    {
+      "role": "",
+      "company": "",
+      "start": "",
+      "end": "",
+      "location": "",
+      "summary": [""]
+    }
+  ],
+  "certifications": [""],
+  "achievements": [""]
+}
