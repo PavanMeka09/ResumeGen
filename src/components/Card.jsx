@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { IoMdClose } from "react-icons/io";
+import { Primary } from './ui/Buttons/Primary';
 
 export const Card = (props) => {
   const [currentState, setCurrentState] = useState(false);
@@ -23,9 +24,7 @@ export const Card = (props) => {
         <div className='h-[60vh] w-[24vw] relative hover:border-black dark:hover:border-white border-zinc-400 border-2 rounded-2xl flex justify-center items-center flex-col gap-6 transition-[border] group'>
           <img onClick={handleClick} src={props.image} alt={props.title + " image"} className='h-[80%] cursor-zoom-in border-2'/>
           <h1 className='text-xl underline'>{props.title}</h1>
-          <button onClick={() => {
-            window.location.href='/generate';
-          }} className='hidden group-hover:inline-block absolute bottom-32 rounded-full px-8 py-2 bg-zinc-950 text-zinc-100'>Continue</button>
+          <Primary title='Continue' to='/generate' className='hidden group-hover:inline-block absolute bottom-32 rounded-full'/>
         </div>
         {renderZoomin()}
         </>

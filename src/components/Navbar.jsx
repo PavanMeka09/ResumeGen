@@ -40,7 +40,7 @@ export const Navbar = () => {
   };
 
   return (
-    <nav className="w-screen h-[10vh] border-b-[1px] flex items-center justify-between px-20 backdrop-filter backdrop-blur-md bg-zinc-100 text-zinc-950 border-zinc-400 dark:bg-zinc-950 dark:text-zinc-100">
+    <nav className="w-screen h-[10vh] border-b-[1px] flex items-center justify-between px-20 backdrop-filter backdrop-blur-md bg-zinc-100 text-zinc-950 border-zinc-400 dark:bg-[#18181b] dark:text-zinc-100">
       <Link to="/" className="text-3xl">
         ResumeGen
       </Link>
