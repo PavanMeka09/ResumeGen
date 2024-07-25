@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router-dom";
-import { Templates } from "./Pages/Templates.jsx";
-import { Generate } from "./Pages/Generate.jsx";
-import { Home } from "./Pages/Home";
+import { Templates } from "./pages/Templates.jsx";
+import { Generate } from "./pages/Generate.jsx";
+import { Home } from "./pages/Home.jsx";
 
 const App = () => {
   return (

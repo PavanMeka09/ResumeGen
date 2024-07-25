@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { IoMdClose } from "react-icons/io";
-import { Primary } from "./ui/Buttons/Primary";
+import { Btn } from "./ui/Btn.jsx";
 import { motion } from "framer-motion";
 
 export const Card = (props) => {
@@ -51,7 +51,7 @@ export const Card = (props) => {
           animate={{ opacity: hover ? 1 : 0, y: hover ? 0 : 50 }}
           className="absolute bottom-32"
         >
-          <Primary title="Continue" to="/generate" />
+          <Btn title="Continue" to="/generate" variant='primary'/>
         </motion.span>
         <div className="h-[20%] w-max bg-zinc-800 flex justify-center items-center">
           <h1 className="text-xl text-center absolute bottom-0">{props.title}</h1>
