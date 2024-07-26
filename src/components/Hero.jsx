@@ -7,7 +7,7 @@ export const Hero = () => {
       <motion.div initial={{opacity: 0, y: 20}} animate={{opacity: 1, y: 0}} className='flex justify-center items-center flex-col gap-10'>
         <h1 className='text-4xl text-center'>AI Based ATS Friendly Resume Generator</h1>
         <h2>no ads, no signup, fill data, get resume, available in latex and pdf</h2>
-        <Btn title="Create a New Resume" to="/templates" variant='Primary'/>
+        <Btn title="Create a New Resume" to="/templates" hoverEffect/>
       </motion.div>
     </div>
   )

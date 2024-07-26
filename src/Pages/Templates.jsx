@@ -14,7 +14,7 @@ export const Templates = () => {
           className="flex justify-center items-center flex-wrap gap-20 w-[80vw] mx-auto"
         >
           <Card title="Vertical" image="vertical.jpg" />
-          {/* <Card title="Horizontal" image="horizontal.jpeg" /> */}
+          <Card title="Horizontal" image="horizontal.jpeg" />
         </motion.div>
       </div>
     </>
