@@ -41,8 +41,7 @@ export const Btn = ({ variant = 'primary', to, className, title, hoverEffect }) 
   }
 
   return (
-    <Link to={to} className={`${className} ${baseClasses} ${specificClasses}`} onClick={(e) => {
-      e.preventDefault()}}>
+    <Link to={to} className={`${className} ${baseClasses} ${specificClasses}`}>
       {title}
     </Link>
   );
