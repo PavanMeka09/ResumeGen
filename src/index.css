@@ -12,6 +12,9 @@ html {
   @apply transition-colors;
 }
 
+h1, h2, h3, h4, p {
+  @apply text-zinc-950 dark:text-zinc-100;
+}
 ::-webkit-scrollbar {
   width: 8px;
 }
