@@ -1,28 +1,45 @@
 import data from "./initialValues.json";
 import { IoMdPerson } from "react-icons/io";
+import { BsPersonVcardFill } from "react-icons/bs";
+import { IoSchool } from "react-icons/io5";
+import { FaGear } from "react-icons/fa6";
+import { GrProjects } from "react-icons/gr";
 import { Btn } from "../ui/Btn.jsx";
 
 export const Inputs = () => {
+  const feilds = [
+    <IoMdPerson />,
+    <BsPersonVcardFill />,
+    <FaGear />,
+    <IoSchool />,
+    <GrProjects />,
+  ];
   return (
     <div className="border-2 flex justify-center items-center gap-20 flex-col">
       <span className="flex justify-center items-center gap-32">
-        <IoMdPerson className="text-[100px] p-4 rounded-full border-[1px] border-zinc-400 hover:-translate-y-1 transition-all" />
-        <IoMdPerson className="text-[100px] p-4 rounded-full border-[1px] border-zinc-400 hover:-translate-y-1 transition-all" />
-        <IoMdPerson className="text-[100px] p-4 rounded-full border-[1px] border-zinc-400 hover:-translate-y-1 transition-all" />
-        <IoMdPerson className="text-[100px] p-4 rounded-full border-[1px] border-zinc-400 hover:-translate-y-1 transition-all" />
+        {feilds.map((feild) => (
+          <div className="text-[50px] p-4 rounded-full border-[1px] border-zinc-400 hover:-translate-y-1 transition-all">
+            {feild}
+          </div>
+        ))}
       </span>
 
-      <form className="flex justify-evenly items-center flex-col gap-20">
-        <div className="relative">
-          <label htmlFor="fullName">Full Name: </label>
-          <input name="fullName" />
-        </div>
-        {/* <button
-              type="submit"
-              className=" bg-zinc-950 text-zinc-100 dark:bg-zinc-200 dark:text-zinc-950 py-2 px-4 rounded-md hover:bg-zinc-800 dark:hover:bg-zinc-300 active:scale-95"
+      <form className="flex justify-evenly items-center flex-col">
+        <div>
+          <div>
+            <label
+              htmlFor="photo"
+              className="px-[4rem] py-[3rem] cursor-pointer border-[1px] border-zinc-950 rounded-full text-4xl"
             >
-              Submit
-            </button> */}
+              +
+            </label>
+            <input type="file" id="photo" className="invisible" />
+          </div>
+          <div>
+            <label htmlFor="fullName">Full Name: </label>
+            <input id="fullName" />
+          </div>
+        </div>
         <button type="submit">
           <Btn title="Submit" />
         </button>

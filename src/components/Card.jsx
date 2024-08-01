@@ -55,8 +55,8 @@ export const Card = (props) => {
         >
           <Btn title="Continue" to="/generate" variant="primary" />
         </motion.span>
-        <div className="h-[20%] w-[100%] bg-zinc-800 flex justify-center items-center absolute bottom-0">
-          <h1 className="text-xl text-center text-zinc-100">{props.title}</h1>
+        <div className="bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-25 h-[20%] w-[100%] bg-zinc-950 dark:bg-zinc-100 dark:bg-opacity-25 flex justify-center items-center absolute bottom-0">
+          <h1 className="text-xl text-center text-zinc-100 dark:text-zinc-950">{props.title}</h1>
         </div>
       </motion.div>
       {renderZoomin()}
