@@ -5,6 +5,7 @@ import { IoSchool } from "react-icons/io5";
 import { FaGear } from "react-icons/fa6";
 import { GrProjects } from "react-icons/gr";
 import { Btn } from "../ui/Btn.jsx";
+import { useState } from "react";
 
 export const Inputs = () => {
   const feilds = [
@@ -12,10 +13,12 @@ export const Inputs = () => {
     <BsPersonVcardFill />,
     <FaGear />,
     <IoSchool />,
-    <GrProjects />,
+    <GrProjects />
   ];
+  const [currentView, setCurrentView] = useState("personal")
+
   return (
-    <div className="border-2 flex justify-center items-center gap-20 flex-col">
+    <div className="flex justify-center items-center gap-20 flex-col">
       <span className="flex justify-center items-center gap-32">
         {feilds.map((feild) => (
           <div className="text-[50px] p-4 rounded-full border-[1px] border-zinc-400 hover:-translate-y-1 transition-all">
@@ -24,26 +27,7 @@ export const Inputs = () => {
         ))}
       </span>
 
-      <form className="flex justify-evenly items-center flex-col">
-        <div>
-          <div>
-            <label
-              htmlFor="photo"
-              className="px-[4rem] py-[3rem] cursor-pointer border-[1px] border-zinc-950 rounded-full text-4xl"
-            >
-              +
-            </label>
-            <input type="file" id="photo" className="invisible" />
-          </div>
-          <div>
-            <label htmlFor="fullName">Full Name: </label>
-            <input id="fullName" />
-          </div>
-        </div>
-        <button type="submit">
-          <Btn title="Submit" />
-        </button>
-      </form>
+      <currentView />
     </div>
   );
 };
